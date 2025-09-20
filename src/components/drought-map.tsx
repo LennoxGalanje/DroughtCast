@@ -65,7 +65,7 @@ export function DroughtMap({ regions }: { regions: RegionData[] }) {
     setSelectedRegion(null);
   }
 
-  if (!apiKey) {
+  if (!apiKey || apiKey === 'YOUR_API_KEY_HERE') {
     return (
       <div className="w-full h-full bg-muted flex flex-col items-center justify-center text-center p-4">
         <h3 className="text-lg font-semibold">Google Maps API Key Missing</h3>
